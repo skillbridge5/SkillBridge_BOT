@@ -5,17 +5,15 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 
-COPY dist/ ./dist/
 COPY bot.js ./
 COPY questions.json ./
+COPY skillbridge_logo_3d.png ./
 
 RUN addgroup -g 1001 -S appgroup && \
     adduser -S appuser -u 1001 -G appgroup && \
     mkdir -p /app/data && chown -R appuser:appgroup /app
 
 USER appuser
-
-VOLUME /app/data
 
 ENV NODE_ENV=production
 ENV DB_PATH=/app/data/skillbridge.db
