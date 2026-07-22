@@ -1,0 +1,23 @@
+{
+  "name": "skillbridge-community-bot",
+  "version": "1.0.0",
+  "description": "SkillBridge Community Bot – Gamified Learning Platform",
+  "private": true,
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop skillbridge-bot",
+    "pm2:restart": "pm2 restart skillbridge-bot",
+    "pm2:logs": "pm2 logs skillbridge-bot",
+    "pm2:status": "pm2 status",
+    "backup": "./backup.sh"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "nodemon": "^3.1.14"
+  }
+}

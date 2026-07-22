@@ -1,0 +1,614 @@
+{
+  "categories": {
+    "Python": [
+      {
+        "question": "What is the output of print(type([]))?",
+        "options": ["<class 'list'>", "<class 'array'>", "<class 'tuple'>", "<class 'dict'>"],
+        "correct": 0,
+        "explanation": "In Python, [] creates a list object."
+      },
+      {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["func", "def", "function", "define"],
+        "correct": 1,
+        "explanation": "The def keyword is used to define functions in Python."
+      },
+      {
+        "question": "What does len() return for an empty string?",
+        "options": ["1", "0", "None", "Error"],
+        "correct": 1,
+        "explanation": "len('') returns 0 because the string has no characters."
+      },
+      {
+        "question": "Which of these is NOT a Python data type?",
+        "options": ["list", "dict", "array", "set"],
+        "correct": 2,
+        "explanation": "While Python has arrays via the array module, 'array' is not a built-in data type."
+      },
+      {
+        "question": "What is the correct file extension for Python files?",
+        "options": [".python", ".py", ".pt", ".pyt"],
+        "correct": 1,
+        "explanation": "Python files use the .py extension."
+      },
+      {
+        "question": "What is the output of print(2 ** 3)?",
+        "options": ["6", "8", "5", "23"],
+        "correct": 1,
+        "explanation": "** is the exponentiation operator. 2 ** 3 = 2^3 = 8."
+      },
+      {
+        "question": "Which method adds an element to the end of a list?",
+        "options": ["add()", "append()", "insert()", "push()"],
+        "correct": 1,
+        "explanation": "append() adds a single element to the end of a list."
+      },
+      {
+        "question": "What is the output of print(bool('False'))?",
+        "options": ["False", "True", "None", "Error"],
+        "correct": 1,
+        "explanation": "Any non-empty string is truthy in Python, including 'False'."
+      },
+      {
+        "question": "Which of the following is used to create a dictionary?",
+        "options": ["{}", "[]", "()", "<>"],
+        "correct": 0,
+        "explanation": "Curly braces {} are used to create dictionaries in Python."
+      },
+      {
+        "question": "What does 'self' represent in a Python class?",
+        "options": ["The class itself", "The current instance", "The parent class", "A global variable"],
+        "correct": 1,
+        "explanation": "self refers to the current instance of the class."
+      },
+      {
+        "question": "What is a lambda function in Python?",
+        "options": ["A named function", "An anonymous function", "A class method", "A generator"],
+        "correct": 1,
+        "explanation": "Lambda creates small anonymous functions using the lambda keyword."
+      },
+      {
+        "question": "Which module is used for regular expressions in Python?",
+        "options": ["regex", "re", "regexp", "pattern"],
+        "correct": 1,
+        "explanation": "The 're' module provides regular expression matching operations."
+      },
+      {
+        "question": "What is the output of print(list(range(5)))?",
+        "options": ["[1, 2, 3, 4, 5]", "[0, 1, 2, 3, 4]", "[0, 1, 2, 3, 4, 5]", "[1, 2, 3, 4]"],
+        "correct": 1,
+        "explanation": "range(5) generates numbers from 0 to 4."
+      },
+      {
+        "question": "Which keyword is used to handle exceptions in Python?",
+        "options": ["catch", "except", "handle", "error"],
+        "correct": 1,
+        "explanation": "try/except is used for exception handling in Python."
+      },
+      {
+        "question": "What is the output of print('Hello'[1:3])?",
+        "options": ["He", "el", "ell", "Hello"],
+        "correct": 1,
+        "explanation": "String slicing [1:3] returns characters at index 1 and 2."
+      },
+      {
+        "question": "What does the 'yield' keyword do in Python?",
+        "options": ["Returns a value", "Creates a generator", "Stops execution", "Imports a module"],
+        "correct": 1,
+        "explanation": "yield turns a function into a generator, producing values lazily."
+      },
+      {
+        "question": "Which of these is a mutable data type in Python?",
+        "options": ["tuple", "string", "list", "int"],
+        "correct": 2,
+        "explanation": "Lists are mutable; tuples, strings, and ints are immutable."
+      },
+      {
+        "question": "What is the output of print(10 // 3)?",
+        "options": ["3.33", "3", "4", "10/3"],
+        "correct": 1,
+        "explanation": "// is floor division. 10 // 3 = 3."
+      },
+      {
+        "question": "How do you start a for loop in Python?",
+        "options": ["for i in range(10)", "for (i = 0; i < 10; i++)", "for i = 1 to 10", "foreach i in 10"],
+        "correct": 0,
+        "explanation": "Python uses 'for item in iterable' syntax."
+      },
+      {
+        "question": "What is the purpose of __init__ in Python?",
+        "options": ["Initialize a module", "Initialize an object", "Import a class", "Define a constant"],
+        "correct": 1,
+        "explanation": "__init__ is the constructor method that initializes a new object."
+      }
+    ],
+    "AI": [
+      {
+        "question": "What does NLP stand for in AI?",
+        "options": ["Natural Language Processing", "Neural Logic Programming", "Network Learning Protocol", "Natural Learning Process"],
+        "correct": 0,
+        "explanation": "NLP stands for Natural Language Processing, a field of AI focused on language understanding."
+      },
+      {
+        "question": "What is a neural network?",
+        "options": ["A computer network", "A set of algorithms modeled after the brain", "A social network", "A database system"],
+        "correct": 1,
+        "explanation": "Neural networks are computing systems inspired by biological neural networks in the brain."
+      },
+      {
+        "question": "Which algorithm is commonly used for classification?",
+        "options": ["Linear Regression", "Random Forest", "K-Means", "PCA"],
+        "correct": 1,
+        "explanation": "Random Forest is a popular classification algorithm. Linear Regression is for regression, K-Means for clustering."
+      },
+      {
+        "question": "What is overfitting in machine learning?",
+        "options": ["Model is too simple", "Model performs well on training but poorly on test data", "Model has too few parameters", "Model trains too slowly"],
+        "correct": 1,
+        "explanation": "Overfitting means the model memorizes training data instead of learning general patterns."
+      },
+      {
+        "question": "What does CNN stand for in deep learning?",
+        "options": ["Central Neural Network", "Convolutional Neural Network", "Connected Neural Network", "Complex Neural Network"],
+        "correct": 1,
+        "explanation": "CNN stands for Convolutional Neural Network, commonly used for image processing."
+      },
+      {
+        "question": "What is transfer learning?",
+        "options": ["Moving data between servers", "Using a pre-trained model on a new task", "Transferring files", "Learning to transfer data"],
+        "correct": 1,
+        "explanation": "Transfer learning reuses a model trained on one task as a starting point for another."
+      },
+      {
+        "question": "Which library is most popular for deep learning in Python?",
+        "options": ["NumPy", "Pandas", "TensorFlow", "Matplotlib"],
+        "correct": 2,
+        "explanation": "TensorFlow (along with PyTorch) is a leading deep learning framework."
+      },
+      {
+        "question": "What is the purpose of a loss function?",
+        "options": ["To measure model accuracy", "To quantify prediction error", "To speed up training", "To store model weights"],
+        "correct": 1,
+        "explanation": "A loss function measures how far the model's predictions are from the actual values."
+      },
+      {
+        "question": "What is gradient descent?",
+        "options": ["A sorting algorithm", "An optimization algorithm to minimize loss", "A data preprocessing technique", "A visualization method"],
+        "correct": 1,
+        "explanation": "Gradient descent iteratively adjusts parameters to minimize the loss function."
+      },
+      {
+        "question": "What is the role of a bias term in a neural network?",
+        "options": ["To speed up training", "To allow the model to fit data better", "To reduce overfitting", "To normalize inputs"],
+        "correct": 1,
+        "explanation": "Bias allows the activation function to be shifted, helping the model fit the data."
+      },
+      {
+        "question": "What is an autoencoder?",
+        "options": ["A type of robot", "A neural network for unsupervised learning", "A compiler", "A database engine"],
+        "correct": 1,
+        "explanation": "Autoencoders learn efficient data representations, often for dimensionality reduction."
+      },
+      {
+        "question": "What does GAN stand for?",
+        "options": ["Generated AI Network", "Generative Adversarial Network", "Global AI Network", "Gradient Adversarial Network"],
+        "correct": 1,
+        "explanation": "GANs consist of two networks competing to generate realistic data."
+      },
+      {
+        "question": "What is reinforcement learning?",
+        "options": ["Learning from labeled data", "Learning through trial and error with rewards", "Learning from clustering", "Learning by memorization"],
+        "correct": 1,
+        "explanation": "RL agents learn by taking actions in an environment and receiving rewards or penalties."
+      },
+      {
+        "question": "What is dropout in neural networks?",
+        "options": ["Removing data", "Randomly deactivating neurons during training", "Deleting a model", "Stopping training early"],
+        "correct": 1,
+        "explanation": "Dropout randomly sets some neurons to zero during training to prevent overfitting."
+      },
+      {
+        "question": "What is the purpose of an activation function?",
+        "options": ["To initialize weights", "To introduce non-linearity", "To normalize data", "To split data"],
+        "correct": 1,
+        "explanation": "Activation functions like ReLU, sigmoid introduce non-linearity into the network."
+      },
+      {
+        "question": "What is feature engineering?",
+        "options": ["Building engines", "Creating new input features from raw data", "Training a model", "Deploying a model"],
+        "correct": 1,
+        "explanation": "Feature engineering is the process of creating meaningful features from raw data."
+      },
+      {
+        "question": "What does RNN stand for?",
+        "options": ["Random Neural Network", "Recurrent Neural Network", "Regular Neural Network", "Reinforced Neural Network"],
+        "correct": 1,
+        "explanation": "RNNs have connections that loop, making them suitable for sequential data."
+      },
+      {
+        "question": "What is a hyperparameter?",
+        "options": ["A parameter learned from data", "A setting configured before training", "An output of the model", "A type of loss function"],
+        "correct": 1,
+        "explanation": "Hyperparameters like learning rate and batch size are set before training begins."
+      },
+      {
+        "question": "What is the vanishing gradient problem?",
+        "options": ["Gradients become too large", "Gradients shrink to near-zero in deep networks", "Gradients oscillate", "Gradients disappear from memory"],
+        "correct": 1,
+        "explanation": "In deep networks, gradients can become extremely small, making training difficult."
+      },
+      {
+        "question": "What is the purpose of a validation set?",
+        "options": ["To train the model", "To tune hyperparameters and prevent overfitting", "To deploy the model", "To collect data"],
+        "correct": 1,
+        "explanation": "A validation set evaluates model performance during training to guide tuning."
+      }
+    ],
+    "Cybersecurity": [
+      {
+        "question": "What does HTTPS stand for?",
+        "options": ["HyperText Transfer Protocol Secure", "HyperText Transfer Protocol Standard", "High Transfer Protocol Secure", "Hyper Transfer Text Protocol"],
+        "correct": 0,
+        "explanation": "HTTPS is HTTP with SSL/TLS encryption for secure communication."
+      },
+      {
+        "question": "What is phishing?",
+        "options": ["A type of fishing", "A cyberattack using deceptive emails/websites", "A network protocol", "A type of malware"],
+        "correct": 1,
+        "explanation": "Phishing tricks users into revealing sensitive information via fake communications."
+      },
+      {
+        "question": "What is a firewall?",
+        "options": ["A physical wall", "A network security device that monitors traffic", "A type of virus", "An antivirus software"],
+        "correct": 1,
+        "explanation": "A firewall filters incoming and outgoing network traffic based on security rules."
+      },
+      {
+        "question": "What does SQL injection target?",
+        "options": ["Network hardware", "Web applications using databases", "Operating systems", "Email servers"],
+        "correct": 1,
+        "explanation": "SQL injection exploits vulnerabilities in database-driven web applications."
+      },
+      {
+        "question": "What is two-factor authentication (2FA)?",
+        "options": ["Using two passwords", "Using two different verification methods", "Logging in twice", "Using two devices"],
+        "correct": 1,
+        "explanation": "2FA requires two different forms of identification, like a password and a code."
+      },
+      {
+        "question": "What is a brute force attack?",
+        "options": ["Physical force", "Trying all possible password combinations", "Using social engineering", "Exploiting software bugs"],
+        "correct": 1,
+        "explanation": "Brute force attacks systematically try every possible combination to crack a password."
+      },
+      {
+        "question": "What is encryption?",
+        "options": ["Deleting data", "Converting data into a coded format", "Compressing data", "Backing up data"],
+        "correct": 1,
+        "explanation": "Encryption converts readable data into ciphertext to prevent unauthorized access."
+      },
+      {
+        "question": "What is a VPN?",
+        "options": ["Virtual Private Network", "Very Private Network", "Virtual Public Node", "Verified Private Network"],
+        "correct": 0,
+        "explanation": "A VPN creates a secure, encrypted tunnel over a public network."
+      },
+      {
+        "question": "What is malware?",
+        "options": ["Good software", "Malicious software designed to harm", "A type of hardware", "A network protocol"],
+        "correct": 1,
+        "explanation": "Malware includes viruses, trojans, ransomware, and other harmful software."
+      },
+      {
+        "question": "What is a zero-day exploit?",
+        "options": ["An exploit that takes zero days to develop", "An exploit for a vulnerability not yet patched", "An old exploit", "A harmless exploit"],
+        "correct": 1,
+        "explanation": "Zero-day exploits target vulnerabilities before developers release a fix."
+      },
+      {
+        "question": "What does DDoS stand for?",
+        "options": ["Distributed Denial of Service", "Direct Denial of Service", "Digital Denial of System", "Distributed Data on Server"],
+        "correct": 0,
+        "explanation": "DDoS attacks overwhelm a target with traffic from multiple sources."
+      },
+      {
+        "question": "What is social engineering?",
+        "options": ["Building social networks", "Manipulating people into revealing information", "Engineering social media", "Social media marketing"],
+        "correct": 1,
+        "explanation": "Social engineering exploits human psychology rather than technical vulnerabilities."
+      },
+      {
+        "question": "What is a hash function used for in security?",
+        "options": ["Encrypting passwords", "Verifying data integrity", "Compressing files", "Sending emails"],
+        "correct": 1,
+        "explanation": "Hash functions generate fixed-size outputs to verify data hasn't been altered."
+      },
+      {
+        "question": "What is the principle of least privilege?",
+        "options": ["Everyone gets admin access", "Users get only the minimum access needed", "No one gets access", "Only the CEO gets access"],
+        "correct": 1,
+        "explanation": "Least privilege limits user access to only what's necessary for their role."
+      },
+      {
+        "question": "What is a man-in-the-middle attack?",
+        "options": ["Attacking the server directly", "Intercepting communication between two parties", "Physical intrusion", "Denial of service"],
+        "correct": 1,
+        "explanation": "MITM attacks secretly relay and possibly alter communication between two parties."
+      },
+      {
+        "question": "What is XSS?",
+        "options": ["Cross-Site Scripting", "Extra Secure System", "Cross-Server Communication", "Extended Security Standard"],
+        "correct": 0,
+        "explanation": "XSS injects malicious scripts into web pages viewed by other users."
+      },
+      {
+        "question": "What is the purpose of a SIEM system?",
+        "options": ["Encrypt data", "Centralize security monitoring and alerting", "Block viruses", "Manage passwords"],
+        "correct": 1,
+        "explanation": "SIEM aggregates and analyzes security logs from across the network."
+      },
+      {
+        "question": "What is ransomware?",
+        "options": ["Software that asks for a ransom", "Malware that encrypts files and demands payment", "A type of firewall", "An antivirus program"],
+        "correct": 1,
+        "explanation": "Ransomware locks victims out of their data until a ransom is paid."
+      },
+      {
+        "question": "What is penetration testing?",
+        "options": ["Poking holes in a wall", "Simulated cyberattack to test defenses", "Testing network speed", "Installing security software"],
+        "correct": 1,
+        "explanation": "Pen testing involves authorized simulated attacks to find security weaknesses."
+      },
+      {
+        "question": "What is PKI?",
+        "options": ["Private Key Infrastructure", "Public Key Infrastructure", "Personal Key Identity", "Protected Key Internet"],
+        "correct": 1,
+        "explanation": "PKI manages digital certificates and public-key encryption for secure communications."
+      }
+    ],
+    "Full-Stack": [
+      {
+        "question": "What does REST stand for in web development?",
+        "options": ["Representational State Transfer", "Remote Execution Standard Transfer", "Resource Entity State Transfer", "Responsive State Technology"],
+        "correct": 0,
+        "explanation": "REST is an architectural style for designing networked applications."
+      },
+      {
+        "question": "What is the virtual DOM?",
+        "options": ["A real DOM element", "A lightweight copy of the real DOM", "A browser extension", "A database"],
+        "correct": 1,
+        "explanation": "The virtual DOM is a programming concept where a virtual representation of the UI is kept in memory."
+      },
+      {
+        "question": "What does CSS stand for?",
+        "options": ["Computer Style Sheets", "Cascading Style Sheets", "Creative Style System", "Colorful Style Sheets"],
+        "correct": 1,
+        "explanation": "CSS (Cascading Style Sheets) is used to style HTML documents."
+      },
+      {
+        "question": "What is middleware in Express.js?",
+        "options": ["Database connection", "Functions that have access to request/response", "Frontend framework", "Template engine"],
+        "correct": 1,
+        "explanation": "Middleware functions execute during the request-response cycle."
+      },
+      {
+        "question": "What is JWT?",
+        "options": ["Java Web Token", "JSON Web Token", "JavaScript Web Toolkit", "JSON Wireless Transfer"],
+        "correct": 1,
+        "explanation": "JWT is a compact, URL-safe means of representing claims between two parties."
+      },
+      {
+        "question": "What is the purpose of package.json?",
+        "options": ["Store user data", "Manage project dependencies and scripts", "Configure the database", "Style the application"],
+        "correct": 1,
+        "explanation": "package.json defines project metadata, dependencies, and npm scripts."
+      },
+      {
+        "question": "What is a SPA?",
+        "options": ["Single Page Application", "Secure Page Application", "Server Page Architecture", "Simple Page App"],
+        "correct": 0,
+        "explanation": "A SPA loads a single HTML page and dynamically updates content without page reloads."
+      },
+      {
+        "question": "What is TypeScript?",
+        "options": ["A styling language", "A typed superset of JavaScript", "A database query language", "A markup language"],
+        "correct": 1,
+        "explanation": "TypeScript adds static typing and other features to JavaScript."
+      },
+      {
+        "question": "What does DOM stand for?",
+        "options": ["Data Object Model", "Document Object Model", "Digital Object Mode", "Document Oriented Mapping"],
+        "correct": 1,
+        "explanation": "The DOM is a programming interface representing the structure of an HTML document."
+      },
+      {
+        "question": "What is a CSS grid?",
+        "options": ["A table layout", "A two-dimensional layout system", "A JavaScript library", "A CSS reset"],
+        "correct": 1,
+        "explanation": "CSS Grid is a layout system for creating complex two-dimensional layouts."
+      },
+      {
+        "question": "What is the purpose of async/await in JavaScript?",
+        "options": ["Loop control", "Handle asynchronous operations cleanly", "Define classes", "Style elements"],
+        "correct": 1,
+        "explanation": "async/await provides a cleaner syntax for working with Promises."
+      },
+      {
+        "question": "What is a WebSocket?",
+        "options": ["A type of socket", "A protocol for full-duplex communication", "A database connector", "An HTTP method"],
+        "correct": 1,
+        "explanation": "WebSockets provide persistent, bidirectional communication between client and server."
+      },
+      {
+        "question": "What is MongoDB?",
+        "options": ["A relational database", "A NoSQL document database", "A programming language", "An operating system"],
+        "correct": 1,
+        "explanation": "MongoDB is a document-oriented NoSQL database that stores JSON-like documents."
+      },
+      {
+        "question": "What is CORS?",
+        "options": ["Cross-Origin Resource Sharing", "Central Origin Response System", "Cross-Output Request Service", "Connected Origin Routing System"],
+        "correct": 0,
+        "explanation": "CORS is a mechanism that allows restricted resources to be requested from another domain."
+      },
+      {
+        "question": "What is the event loop in Node.js?",
+        "options": ["A loop for DOM events", "A mechanism that handles asynchronous callbacks", "A for-loop for arrays", "A database trigger"],
+        "correct": 1,
+        "explanation": "The event loop allows Node.js to perform non-blocking I/O operations."
+      },
+      {
+        "question": "What is Redux?",
+        "options": ["A CSS framework", "A state management library", "A database ORM", "A testing tool"],
+        "correct": 1,
+        "explanation": "Redux is a predictable state container for JavaScript applications."
+      },
+      {
+        "question": "What does API stand for?",
+        "options": ["Application Programming Interface", "Advanced Protocol Integration", "Automated Program Interaction", "Applied Programming Internet"],
+        "correct": 0,
+        "explanation": "An API defines how different software components should communicate."
+      },
+      {
+        "question": "What is SSR?",
+        "options": ["Server-Side Rendering", "Secure Socket Response", "Standard Service Routine", "System State Recovery"],
+        "correct": 0,
+        "explanation": "SSR renders web pages on the server before sending them to the client."
+      },
+      {
+        "question": "What is a CDN?",
+        "options": ["Central Data Node", "Content Delivery Network", "Connected Device Network", "Cloud Database Navigator"],
+        "correct": 1,
+        "explanation": "A CDN distributes content across multiple servers for faster delivery."
+      },
+      {
+        "question": "What is an ORM?",
+        "options": ["Online Resource Manager", "Object-Relational Mapping", "Output Response Module", "Open Runtime Manager"],
+        "correct": 1,
+        "explanation": "An ORM maps objects in code to database tables, simplifying database operations."
+      }
+    ],
+    "Data Science": [
+      {
+        "question": "What is the purpose of data cleaning?",
+        "options": ["Making data look pretty", "Detecting and correcting corrupt or inaccurate records", "Creating new data", "Deleting all data"],
+        "correct": 1,
+        "explanation": "Data cleaning identifies and fixes errors, inconsistencies, and inaccuracies in datasets."
+      },
+      {
+        "question": "What is a CSV file?",
+        "options": ["A database", "Comma-Separated Values file", "A compiled program", "A type of image"],
+        "correct": 1,
+        "explanation": "CSV is a plain text format for storing tabular data with comma-separated values."
+      },
+      {
+        "question": "What is the mean?",
+        "options": ["The most frequent value", "The average of all values", "The middle value", "The smallest value"],
+        "correct": 1,
+        "explanation": "The mean is the sum of all values divided by the number of values."
+      },
+      {
+        "question": "What is a scatter plot used for?",
+        "options": ["Showing trends over time", "Displaying relationship between two variables", "Showing parts of a whole", "Counting frequencies"],
+        "correct": 1,
+        "explanation": "Scatter plots show the relationship between two continuous variables."
+      },
+      {
+        "question": "What does EDA stand for?",
+        "options": ["Electronic Data Analysis", "Exploratory Data Analysis", "Enhanced Data Analytics", "Estimated Data Assessment"],
+        "correct": 1,
+        "explanation": "EDA is the process of analyzing datasets to summarize their main characteristics."
+      },
+      {
+        "question": "What is a histogram?",
+        "options": ["A type of chart", "A graphical representation of data distribution", "A data structure", "A sorting algorithm"],
+        "correct": 1,
+        "explanation": "A histogram shows the distribution of a single continuous variable using bars."
+      },
+      {
+        "question": "What is the median?",
+        "options": ["The average value", "The middle value when data is sorted", "The most common value", "The range of values"],
+        "correct": 1,
+        "explanation": "The median is the middle value in a sorted dataset."
+      },
+      {
+        "question": "What is Pandas used for?",
+        "options": ["Animal management", "Data manipulation and analysis in Python", "Web development", "Game programming"],
+        "correct": 1,
+        "explanation": "Pandas provides data structures and tools for data analysis in Python."
+      },
+      {
+        "question": "What is a correlation?",
+        "options": ["A type of database", "A statistical relationship between two variables", "A programming language", "A chart type"],
+        "correct": 1,
+        "explanation": "Correlation measures the strength and direction of a relationship between variables."
+      },
+      {
+        "question": "What is a dataset?",
+        "options": ["A single data point", "A collection of related data", "A type of algorithm", "A data backup"],
+        "correct": 1,
+        "explanation": "A dataset is a structured collection of data, typically in tabular form."
+      },
+      {
+        "question": "What is the purpose of data visualization?",
+        "options": ["To store data", "To present data graphically for better understanding", "To encrypt data", "To delete data"],
+        "correct": 1,
+        "explanation": "Data visualization converts data into graphical representations for easier interpretation."
+      },
+      {
+        "question": "What is a box plot?",
+        "options": ["A 3D chart", "A graphical representation of data distribution through quartiles", "A type of histogram", "A scatter plot variant"],
+        "correct": 1,
+        "explanation": "Box plots show the five-number summary: minimum, Q1, median, Q3, and maximum."
+      },
+      {
+        "question": "What is NumPy?",
+        "options": ["A database", "A library for numerical computing in Python", "A web framework", "An operating system"],
+        "correct": 1,
+        "explanation": "NumPy provides support for arrays, matrices, and mathematical functions."
+      },
+      {
+        "question": "What is a pivot table?",
+        "options": ["A rotating table", "A data summarization tool", "A type of chart", "A database backup"],
+        "correct": 1,
+        "explanation": "Pivot tables summarize and rearrange data to view it from different perspectives."
+      },
+      {
+        "question": "What is the standard deviation?",
+        "options": ["The average value", "A measure of data spread", "The most common value", "The range of data"],
+        "correct": 1,
+        "explanation": "Standard deviation measures how spread out data values are from the mean."
+      },
+      {
+        "question": "What is a time series?",
+        "options": ["A single data point", "Data points indexed in time order", "A type of chart", "A database query"],
+        "correct": 1,
+        "explanation": "Time series data is a sequence of data points collected over time intervals."
+      },
+      {
+        "question": "What is data mining?",
+        "options": ["Digging for physical data", "Discovering patterns in large datasets", "Storing data underground", "Deleting old data"],
+        "correct": 1,
+        "explanation": "Data mining uses statistical and computational methods to discover patterns in data."
+      },
+      {
+        "question": "What is a feature in data science?",
+        "options": ["A product feature", "An individual measurable property of data", "A bug in the code", "A type of chart"],
+        "correct": 1,
+        "explanation": "Features are input variables used in predictive models (columns in a dataset)."
+      },
+      {
+        "question": "What is a categorical variable?",
+        "options": ["A numeric variable", "A variable that represents categories or groups", "A continuous variable", "A constant variable"],
+        "correct": 1,
+        "explanation": "Categorical variables represent discrete groups (e.g., color, gender, country)."
+      },
+      {
+        "question": "What is Matplotlib used for?",
+        "options": ["Data storage", "Creating plots and visualizations in Python", "Machine learning", "Web scraping"],
+        "correct": 1,
+        "explanation": "Matplotlib is a plotting library for creating static, animated, and interactive visualizations."
+      }
+    ]
+  }
+}
