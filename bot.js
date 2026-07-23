@@ -1,3 +1,4 @@
+const http = require('http');
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
@@ -2956,6 +2957,15 @@ async function main() {
   log('info', 'Starting SkillBridge Bot...');
   log('info', `Environment: ${process.env.NODE_ENV || 'development'}`);
   log('info', `Admin IDs: ${ADMIN_IDS.length > 0 ? ADMIN_IDS.join(', ') : 'none configured'}`);
+
+  const PORT = process.env.PORT || 3000;
+  const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('SkillBridge Bot is running');
+  });
+  server.listen(PORT, () => {
+    log('info', `Health check server listening on port ${PORT}`);
+  });
 
   db.pragma('wal_checkpoint(TRUNCATE)');
 

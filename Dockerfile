@@ -19,6 +19,8 @@ USER appuser
 ENV NODE_ENV=production
 ENV DB_PATH=/app/data/skillbridge.db
 
+EXPOSE 3000
+
 HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
   CMD pgrep -f "node bot.js" > /dev/null || exit 1
 
