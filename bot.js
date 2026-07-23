@@ -1239,18 +1239,20 @@ function sendReferral(chatId, userId) {
   const code = user.referralCode || `ref_${userId}`;
   const refLink = `https://t.me/skillbridge_hub_bot?start=${code}`;
   const groupLink = `https://t.me/skillbridgeinstituteoftech`;
-  const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(refLink)}&text=${encodeURIComponent('Join SkillBridge Community and learn with me!')}`;
+  const shareText = `Join me on SkillBridge! 🎓\n\n🤖 Start the bot: ${refLink}\n🌐 Join our community: ${groupLink}\n\nEarn SkillPoints, complete challenges & win scholarships!`;
+  const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(shareText)}`;
 
   send(chatId,
     `🔗 <b>Referral Program</b>\n\n` +
     `Share your link and earn 25 SP per friend who joins!\n\n` +
-    `🔗 Referrals: ${user.referralsCount || 0}\n` +
+    `📊 Your Referrals: ${user.referralsCount || 0}\n` +
     `💰 Earned: ${(user.referralsCount || 0) * 25} SP\n\n` +
-    `🔗 <b>Your Referral Link:</b>\n` +
+    `━━━━━━━━━━━━━━━━━━━━━━\n\n` +
+    `🤖 <b>Bot Link (for referral tracking):</b>\n` +
     `<code>${refLink}</code>\n\n` +
-    `🌐 <b>Join our Community:</b>\n` +
-    `${groupLink}`,
-    { reply_markup: JSON.stringify({ inline_keyboard: [[{ text: '📤 Share Link', url: shareUrl }], [{ text: '🌐 Join Community', url: groupLink }], [{ text: '🏠 Home', callback_data: 'nav_start' }]] }) }
+    `🌐 <b>Community Group:</b>\n` +
+    `<code>${groupLink}</code>`,
+    { reply_markup: JSON.stringify({ inline_keyboard: [[{ text: '📤 Share Referral', url: shareUrl }], [{ text: '🌐 Join Community', url: groupLink }], [{ text: '🏠 Home', callback_data: 'nav_start' }]] }) }
   );
 }
 
