@@ -7,6 +7,7 @@ RUN npm ci --omit=dev
 
 COPY bot.js ./
 COPY questions.json ./
+COPY challenges.json ./
 COPY skillbridge_logo_3d.png ./
 
 RUN addgroup -g 1001 -S appgroup && \
