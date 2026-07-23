@@ -431,6 +431,27 @@ function syncPoolFromFile() {
   return { added, updated, skipped };
 }
 
+function seedChallenges() {
+  const count = db.prepare('SELECT COUNT(*) as c FROM challenges').get().c;
+  if (count > 0) return { seeded: 0 };
+  const filePath = path.join(__dirname, 'challenges.json');
+  if (!fs.existsSync(filePath)) {
+    log('warn', 'challenges.json not found, skipping challenge seed');
+    return { seeded: 0 };
+  }
+  const challenges = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  if (!Array.isArray(challenges) || challenges.length === 0) return { seeded: 0 };
+  const stmt = db.prepare('INSERT INTO challenges (title, description, category, points, difficulty, isActive, isDaily, isWeekly, isMonthly) VALUES (?, ?, ?, ?, ?, 1, ?, ?, ?)');
+  const seedAll = db.transaction(() => {
+    for (const c of challenges) {
+      stmt.run(c.title, c.description, c.category, c.points, c.difficulty, c.isDaily || 0, c.isWeekly || 0, c.isMonthly || 0);
+    }
+  });
+  seedAll();
+  log('info', `Seeded ${challenges.length} challenges from challenges.json`);
+  return { seeded: challenges.length };
+}
+
 function selectTodayQuestions() {
   const today = new Date().toISOString().slice(0, 10);
   const existing = db.prepare('SELECT ds.*, qp.questionText, qp.options, qp.correctOptionIndex, qp.explanation, qp.category FROM daily_selection ds JOIN quiz_pool qp ON ds.questionId = qp.id WHERE ds.date = ? ORDER BY ds."order" ASC').all(today);
@@ -2945,6 +2966,13 @@ async function main() {
     log('info', `Quiz pool: ${stats.total} questions across ${stats.byCategory.length} categories (~${stats.daysCovered} days)`);
   } catch (err) {
     log('warn', `Quiz pool sync failed: ${err.message}`);
+  }
+
+  try {
+    const seedResult = seedChallenges();
+    if (seedResult.seeded > 0) log('info', `Challenges seeded: ${seedResult.seeded}`);
+  } catch (err) {
+    log('warn', `Challenge seed failed: ${err.message}`);
   }
 
   for (let i = 0; i < 10; i++) {
