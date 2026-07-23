@@ -759,7 +759,7 @@ handlers['/start'] = (msg) => {
 
   const startParam = msg.text ? msg.text.split(' ')[1] : null;
   let referralText = '';
-  if (startParam && startParam.startsWith('ref_')) {
+  if (startParam && startParam.startsWith('ref_') && !u.referredBy) {
     const referrerId = parseInt(startParam.replace('ref_', ''));
     const referrer = db.prepare('SELECT * FROM users WHERE id = ?').get(referrerId);
     if (referrer && referrer.id !== u.id) {
@@ -1237,19 +1237,20 @@ function sendReferral(chatId, userId) {
   const user = db.prepare('SELECT * FROM users WHERE telegramId = ?').get(String(userId));
   if (!user) return send(chatId, 'Send /start first.');
   const code = user.referralCode || `ref_${userId}`;
-  const refLink = `https://t.me/${BOT_USERNAME}?start=${code}`;
+  const refLink = `https://t.me/skillbridge_hub_bot?start=${code}`;
+  const groupLink = `https://t.me/skillbridgeinstituteoftech`;
   const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(refLink)}&text=${encodeURIComponent('Join SkillBridge Community and learn with me!')}`;
-
-  const shortLink = `t.me/${BOT_USERNAME}?start=${code}`;
 
   send(chatId,
     `🔗 <b>Referral Program</b>\n\n` +
     `Share your link and earn 25 SP per friend who joins!\n\n` +
     `🔗 Referrals: ${user.referralsCount || 0}\n` +
     `💰 Earned: ${(user.referralsCount || 0) * 25} SP\n\n` +
-    `🌐 <code>${refLink}</code>\n` +
-    `📱 <code>${shortLink}</code>`,
-    { reply_markup: JSON.stringify({ inline_keyboard: [[{ text: '📤 Share Link', url: shareUrl }], [{ text: '🏠 Home', callback_data: 'nav_start' }]] }) }
+    `🔗 <b>Your Referral Link:</b>\n` +
+    `<code>${refLink}</code>\n\n` +
+    `🌐 <b>Join our Community:</b>\n` +
+    `${groupLink}`,
+    { reply_markup: JSON.stringify({ inline_keyboard: [[{ text: '📤 Share Link', url: shareUrl }], [{ text: '🌐 Join Community', url: groupLink }], [{ text: '🏠 Home', callback_data: 'nav_start' }]] }) }
   );
 }
 
