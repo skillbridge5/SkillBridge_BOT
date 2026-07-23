@@ -792,7 +792,8 @@ handlers['/start'] = (msg) => {
       `⭐ <b>Earn SkillPoints</b> — climb levels and unlock rewards\n` +
       `🏅 <b>Collect badges</b> — show off your achievements\n` +
       `🎓 <b>Win scholarships</b> — earn up to 100% scholarship with your SP\n\n` +
-      `Let's get started! Tap a button below 👇\n`;
+      `Let's get started! Tap a button below 👇\n\n` +
+      `🌐 Join our channel: https://t.me/skillbridgeinstituteoftech`;
   } else {
     welcomeText =
       `🎓 <b>Welcome back to SkillBridge</b>\n\n` +
