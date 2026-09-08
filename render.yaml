@@ -2,18 +2,19 @@ services:
   - type: web
     name: skillbridge-bot
     runtime: node
+    plan: free
     buildCommand: npm install
     startCommand: node bot.js
+    healthCheckPath: /
+    autoDeploy: true
     envVars:
       - key: NODE_ENV
         value: production
       - key: TELEGRAM_BOT_TOKEN
         sync: false
       - key: BOT_USERNAME
-        sync: false
+        value: skillbridge_hub_bot
       - key: ADMIN_IDS
         sync: false
       - key: DB_PATH
         value: skillbridge.db
-      - key: PORT
-        value: 10000
